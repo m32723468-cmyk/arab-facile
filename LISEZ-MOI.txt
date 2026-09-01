@@ -1,0 +1,60 @@
+ARAB FACILE — LANDING PAGE (v1)
+================================
+
+MISE EN LIGNE
+-------------
+1. Créer un dépôt GitHub public, par exemple « arab-facile ».
+2. Envoyer TOUT le contenu de ce dossier à la racine du dépôt
+   (les fichiers eux-mêmes, pas le dossier).
+3. Settings > Pages > Branch: main, dossier / (root) > Save.
+4. Attendre deux à trois minutes.
+
+DEUX REMPLACEMENTS AVANT PUBLICATION
+------------------------------------
+Dans robots.txt et sitemap.xml : remplacer USERNAME par le nom du compte
+GitHub, pour que l'adresse du sitemap soit correcte.
+
+NUMÉRO WHATSAPP
+---------------
+Il est déjà en place : +212 677 186542.
+Pour le changer, ouvrir index.html et modifier la ligne :
+
+    const WHATSAPP = '212677186542';
+
+Format : indicatif pays + numéro, chiffres uniquement, sans + ni espaces.
+Tous les boutons de la page se mettent à jour automatiquement.
+
+CE QUI RESTE À FOURNIR
+----------------------
+1. Les prix des trois e-books
+   Dans index.html, chercher « Prix à définir » (trois occurrences).
+
+2. Les trois couvertures d'e-books
+   Les emplacements sont visibles sur la page. Déposer les images dans ce
+   dossier, puis remplacer chaque bloc pointillé par :
+       <img src="couverture-1.jpg" alt="Mon premier alphabet"
+            style="width:100%;height:100%;object-fit:cover">
+
+3. Les liens des réseaux sociaux
+   Dans index.html :
+       const SOCIAL = { tiktok: '...', instagram: '...', youtube: '...' };
+
+4. Les mentions légales
+   Dans confidentialite.html, remplacer tout ce qui est entre crochets :
+   nom, statut, adresse, identifiant, adresse e-mail.
+
+5. Trois témoignages de parents (optionnel mais recommandé)
+   Prénom du parent, prénom et âge de l'enfant, deux ou trois phrases.
+   Nous ajouterons la section.
+
+CE QUE LA PAGE NE FAIT PAS
+--------------------------
+Aucun compte, aucune base de données, aucun paiement en ligne, aucun
+formulaire. Toutes les actions ouvrent WhatsApp avec un message déjà
+rédigé, différent selon le bouton (cours, e-book, lives, question).
+
+Aucun outil de mesure n'est installé : il n'y a donc pas de bandeau
+cookies à afficher. En ajouter un plus tard obligerait à mettre en place
+un vrai bandeau de consentement.
+
+Aucune date ne figure sur la page : elle reste juste sans être mise à jour.
